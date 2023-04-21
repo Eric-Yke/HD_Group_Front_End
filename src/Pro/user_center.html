@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Service Provider Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css'>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<section>
+  <header>
+    <nav class="rad-navigation">
+      <!-- Top left container-->
+      <div class="rad-logo-container">
+        <a href="index.html" class="rad-logo">Housing Service Pro</a>
+        <a href="#" class="rad-toggle-btn pull-right"><i class="fa fa-bars"></i></a>
+      </div>
+
+      <div class="rad-top-nav-container">
+        <ul class="links">
+          <li>
+            <a class="rad-menu-item" href="#">
+              <i class="fa fa-comment-o">
+                <span class="rad-menu-badge">1</span>
+              </i>
+            </a>
+          </li>
+          <li class="rad-dropdown">
+            <a class="rad-menu-item" href="#">
+              <i class="fa fa-bell-o">
+                <span class="rad-menu-badge">1</span>
+              </i>
+            </a>
+            <ul class="rad-dropmenu-item">
+              <li class="rad-dropmenu-header">
+                <a href="#">System Notification</a>
+              </li>
+              <li class="rad-notification-item">
+                <a class="rad-notification-content" href="#"></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+</section>
+
+<aside>
+  <nav class="rad-sidebar">
+    <ul>
+      <li>
+        <a href="index.html" class="inbox">
+          <i class="fa fa-dashboard">
+            <span class="icon-bg rad-bg-success"></span>
+          </i>
+          <span class="rad-sidebar-item">Dashboard</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa fa-list">
+		    <span class="icon-bg rad-bg-danger"></span>
+		  </i>
+          <span class="rad-sidebar-item">My orders</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="snooz">
+          <i class="fa fa-credit-card">
+            <span class="icon-bg rad-bg-primary"></span>
+          </i>
+          <span class="rad-sidebar-item">Subscription</span>
+        </a>
+      </li>
+      <!--1-->
+      <li>
+        <a href="user_center.html">
+          <i class="fa fa-user">
+            <span class="icon-bg rad-bg-violet"></span>
+          </i><span class="rad-sidebar-item">User Center</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<main>
+  <section>
+    <div class="rad-body-wrapper">
+      <h1>Personal Details</h1>
+        <div class="container-fluid">
+          <div class="row">
+            <!--Personal Details-->
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Manage Personal Details</h3>
+                </div>
+                <div class="panel-body">
+                  <!--action = "back end address"-->
+                  <form action = "" method = "post">
+                    Title 
+                    <br /><br />
+                    <select name="title">
+                      <option value="mr">Mr</option>
+                      <option value="ms">Ms</option>
+                      <option value="miss">Miss</option>
+                    </select>
+                    <br /><br />
+                    Given Name 
+                    <br /><br />
+                    <input type = "text" name = "given_name">
+                    <br /><br />
+                    Surname 
+                    <br /><br />
+                    <input type = "text" name = "surname">
+                    <br /><br />
+                    The services you could provide
+                    <br /><br />
+                    <input type = "checkbox" value = "s1">Tree removal &nbsp;&nbsp;
+                    <input type = "checkbox" value = "s2">Roof cleaning <br />
+                    <input type = "checkbox" value = "s3">Fence installation &nbsp;&nbsp;
+                    <input type = "checkbox" value = "s4">Oven repair <br />
+                    <input type = "checkbox" value = "s5">1 more <br />     
+                    <input type = "submit" value = "Save">
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Contact Details</h3>
+                </div>
+                <div class="panel-body">
+                  <!--action = "back end address"-->
+                  <form action = "" method = "post">
+                    Mobile phone 
+                    <br /><br />
+                    <input type = "text" name = "m_phone">
+                    <br /><br />
+                    Personal email address 
+                    <br /><br />
+                    <input type = "text" name = "new_email">
+                    <br /><br />
+                    <input type = "submit" value = "Save">
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Address Details</h3>
+                </div>
+                <div class="panel-body">
+                  <!--action = "back end address"-->
+                  <form action = "" method = "post">
+                    Address line 1 
+                    <br /><br />
+                    <input type = "text" name = "address1">
+                    <br /><br />
+                    Address line 2
+                    <br /><br />
+                    <input type = "text" name = "address2">
+                    <br /><br />
+                    Suburb/Town
+                    <br /><br />
+                    <input type = "text" name = "suburb">
+                    <br /><br />
+                    State
+                    <br /><br />
+                    <select name="state">
+                      <option value="NSW">NSW</option>
+                      <option value="VIC">VIC</option>
+                      <option value="QLD">QLD</option>
+                      <option value="SA">SA</option>
+                      <option value="NT">NT</option>
+                      <option value="WA">WA</option>
+                      <option value="TAS">TAS</option>
+                      <option value="ACT">ACT</option>
+                    </select>
+                    <br /><br />
+                    Postcode
+                    <br /><br />
+                    <input type = "text" name = "postcode">
+                    <br /><br />
+                    <input type = "submit" value = "Save">
+                  </form>
+                </div>
+              </div>
+            </div>
+                    
+            <h1>Password and Security</h1>
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Change Your Password</h3>
+                </div>
+                <div class="panel-body">
+                  <!--action = "back end address"-->
+                  <form action = "" method = "post">
+                    Old password
+                    <br /><br />
+                    <input type = "password" name = "old_password" size = "30" placeholder="Please enter the old password">
+                    <br /><br />
+                    New Password
+                    <br /><br />
+                    <input type = "password" name = "new_password" size = "30" placeholder="Please enter the new password">
+                    <br /><br />
+                    Conifrm Password
+                    <br /><br />
+                    <input type = "password" name = "new_password_confirm" size = "30" placeholder="Please enter the new password">
+                    <br /><br />
+                    <input type = "submit" value = "Save">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
