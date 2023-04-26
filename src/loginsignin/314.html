@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website Landing Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			color: #333;
+		}
+		header{
+			background-color: #fff;
+			color: #333;
+			padding: 20px;
+			text-align: center;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		}
+    input[type="text"],input[type="password"]{
+		line-height: 48px;
+		margin-top: 10px;
+		width: 50%;
+		}
+    input[type="button"]{
+		width: 30%;
+		margin-top: 10px;}
+		h1 {
+			margin: 0;
+			font-size: 36px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+		section {
+			padding: 50px;
+			text-align: center;
+		}
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+		.button {
+			background-color: #f44336;
+			color: #fff;
+			padding: 12px 24px;
+			border: none;
+			border-radius: 4px;
+			font-size: 18px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		.button:hover {
+			background-color: #ff6666;
+		}
+		.features {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 50px;
+		}
+		.feature {
+			width: 300px;
+			margin: 20px;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			text-align: center;
+		}
+	
+		.feature p {
+			font-size: 16px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+		@media screen and (max-width: 768px) {
+			h1 {
+				font-size: 28px;
+			}
+	
+			.feature {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Welcome to Our Website</h1>
+		<p>We create beautiful and responsive websites and look forward to your choice.</p>
+		<button class="button" onclick="scrollToSection('features')">Learn More</button>
+	</header>
+	<section id="features">
+        <div class="features">
+        <input type="text" name="username" placeholder="please enter your username..." />
+        <input type="password" name="password" placeholder="please enter your password...">
+        </div>
+        <div class="features">
+        <input type="button" value="Log in"/>
+        </div>
+  </section>		
+</body>  
+</html>       

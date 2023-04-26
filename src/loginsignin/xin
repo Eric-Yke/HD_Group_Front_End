@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+nav ul li {
+	margin: 0 10px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.login-btn {
+	background-color: #fff;
+	color: #333;
+	padding: 8px 16px;
+	border-radius: 4px;
+	text-transform: uppercase;
+}
+
+main {
+	padding: 20px;
+}
+
+#login-form {
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-radius: 4px;
+	text-align: center;
+}
+
+#login-form h2 {
+	margin-top: 0;
+}
+
+#login-form label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+#login-form input,
+#login-form select {
+	padding: 8px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+#login-form button[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	padding: 8px 16px;
+	border-radius: 4px;
+	border: none;
+	text-transform: uppercase;
+}
+  </style>
+	<title>Login Page</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Login Page</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#" class="login-btn">Login/Register</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="login-form">
+			<h2>Login</h2>
+			<form>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" required>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required>
+				<label for="user-type">I am a:</label>
+				<select id="user-type" name="user-type">
+					<option value="client">Client</option>
+					<option value="professional">Professional</option>
+				</select>
+				<button type="submit">Submit</button>
+			</form>
+			<p>Don't have an account? <a href="#" class="register-link">Sign up here</a></p>
+		</section>
+	</main>
+  <script src="script.js"></script>
+</body>
+<script>
+const loginForm = document.getElementById('login-form');
+const registerForm = document.getElementById('register-form');
+const loginLink = document.getElementById('login-link');
+const registerLink = document.getElementById('register-link');
+const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+// 切换到注册表单
+registerLink.addEventListener('click', () => {
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'block';
+});
+
+// 切换到登录表单
+loginLink.addEventListener('click', () => {
+    registerForm.style.display = 'none';
+    loginForm.style.display = 'block';
+});
+
+// 监听登录表单提交事件
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (!emailRegex.test(email)) {
+        showError('email', '请输入有效的电子邮件地址');
+    } else if (password === '') {
+        showError('password', '请输入密码');
+    } else {
+        // TODO: 发送登录请求
+        console.log('登录表单已提交');
+    }
+});
+
+// 监听注册表单提交事件
+registerForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const email = document.getElementById('register-email').value;
+    const password = document.getElementById('register-password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+
+    if (!emailRegex.test(email)) {
+        showError('register-email', '请输入有效的电子邮件地址');
+    } else if (password === '') {
+        showError('register-password', '请输入密码');
+    } else if (confirmPassword === '') {
+        showError('confirm-password', '请再次输入密码');
+    } else if (password !== confirmPassword) {
+        showError('confirm-password', '密码不匹配');
+    } else {
+        // TODO: 发送注册请求
+        console.log('注册表单已提交');
+    }
+});
+
+// 显示错误信息
+function showError(inputId, message) {
+    const input = document.getElementById(inputId);
+    const error = input.nextElementSibling;
+    error.innerText = message;
+    input.classList.add('invalid');
+}
+
+// 清除错误信息
+function clearError(event) {
+    const input = event.target;
+    const error = input.nextElementSibling;
+    error.innerText = '';
+    input.classList.remove('invalid');
+}
+
+// 监听输入框失去焦点事件，清除错误信息
+const inputs = document.querySelectorAll('input');
+inputs.forEach(input => {
+    input.addEventListener('blur', clearError);
+});
+</script>
+</html>

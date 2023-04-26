@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+nav ul li {
+	margin: 0 10px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.login-btn {
+	background-color: #fff;
+	color: #333;
+	padding: 8px 16px;
+	border-radius: 4px;
+	text-transform: uppercase;
+}
+
+main {
+	padding: 20px;
+}
+
+#login-form {
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-radius: 4px;
+	text-align: center;
+}
+
+#login-form h2 {
+	margin-top: 0;
+}
+
+#login-form label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+#login-form input,
+#login-form select {
+	padding: 8px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+#login-form button[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	padding: 8px 16px;
+	border-radius: 4px;
+	border: none;
+	text-transform: uppercase;
+}
+
+  </style>
+	<title>Login Page</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Login Page</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#" class="login-btn">Login/Register</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<section id="login-form">
+			<h2>Login</h2>
+			<form>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" required>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required>
+				<label for="user-type">I am a:</label>
+				<select id="user-type" name="user-type">
+					<option value="client">Client</option>
+					<option value="professional">Professional</option>
+				</select>
+				<button type="submit">Submit</button>
+			</form>
+			<p>Don't have an account? <a href="#" class="register-link">Sign up here</a></p>
+		</section>
+	</main>
+	
+	<footer>
+		<div class="company-info">
+			<p>Company Name</p>
+			<p>123 Main St.</p>
+			<p>Phone: 555-555-5555</p>
+			<p>Email: info@company.com</p>
+		</div>
+	</footer>
+  <script src="script.js"></script>
+</body>
+</html>
