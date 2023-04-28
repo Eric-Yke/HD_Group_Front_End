@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Order status</title>
+  <link rel="stylesheet" type="text/css" href="ClientStyle.css">
+  <style>
+    p {
+      text-align: center;
+    }
+
+    div {
+      position: absolute;
+      left: 40%;
+    }
+  </style>
+  <script>
+    // 定义订单状态
+    var status = "waiting for Service";
+    // 定义显示不同内容的函数
+    function showStatus() {
+      if (status == "waiting for Professionals") {
+        document.write("<p>Waiting for Professionals respond, usually respond in 2 hours...</p>");
+      } else if (status == "choose a professional") {
+        document.write("<a href='choose-professional.html'>choose a professional</a>");
+      } else if (status == "waiting for Service") {
+        document.write("<p>Order Status: waiting for Service</p>");
+        document.write("<p>Contact Professionals</p>");
+        document.write("<p>Phone Number: 123456789</p>");
+        document.write("<p>Email: professional@example.com</p>");
+      } else if (status == "Servicing") {
+        document.write("<p>Order Status: Servicing</p>");
+        document.write("<p>in service...</p>");
+      } else if (status == "Write a review") {
+        document.write("<p>Order Status: Write a review</p>");
+        document.write("<p>Please rate this service</p>");
+      } else if (status == "Finished") {
+        document.write("<p>Order Status: Finished</p>");
+        document.write("<p>service completed</p>");
+      }
+    }
+
+    // 定义定时刷新函数
+    function refreshPage() {
+      location.reload();
+    }
+
+    // 定时刷新页面
+    setInterval(refreshPage, 3000);
+  </script>
+</head>
+
+<body onload="showStatus()">
+  <div class="phpIn">
+    <h1>Check order status</h1>
+    <!-- 调用显示不同内容的函数 -->
+    <script>showStatus()</script>
+    <!-- 添加刷新功能 -->
+    <div><button onclick="refreshPage()">Reload</button></div>
+  </div>
+</body>
+
+</html>

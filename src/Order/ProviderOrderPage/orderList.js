@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // 从json文件中获取订单数据
-  $.getJSON('orderInfo.json', function (data) {
+  $.getJSON('/Users/cei/Desktop/HD_Group_Front_End/src/Order/ProviderOrderPage/orderInfo.json', function (data) {
     // 遍历订单数据，生成订单列表
     $.each(data, function (index, order) {
       var row = $('<tr>');
