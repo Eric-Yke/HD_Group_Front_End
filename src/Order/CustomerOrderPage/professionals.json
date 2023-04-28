@@ -1,0 +1,20 @@
+[
+  {
+    "avatar": "professional1.png",
+    "name": "carillon Garcia",
+    "score": 4.5,
+    "phone_number": "0423323233"
+  },
+  {
+    "avatar": "professional2.png",
+    "name": "William Brown",
+    "score": 4.8,
+    "phone_number": "0434344345"
+  },
+  {
+    "avatar": "professional3.png",
+    "name": "Michale Marks",
+    "score": 4.2,
+    "phone_number": "0412312312"
+  }
+]

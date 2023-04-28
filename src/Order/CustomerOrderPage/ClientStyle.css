@@ -1,0 +1,74 @@
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+img {
+  border-radius: 50px;
+}
+
+/* 选择专业人士页面的布局： */
+#divContainer {
+  width: 100%;
+  /* text-align: center; */
+  overflow: hidden;
+}
+
+#avatar {
+  float: left;
+  width: 10%;
+}
+
+#rofessionalsInfo {
+  float: center;
+  width: 20%;
+}
+
+#selectButton {
+  float: right;
+  width: 70%;
+}
+
+/* 单选按钮隐藏 */
+/* input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+} */
+
+
+/* 跳转链接 */
+a:link {
+  color: rgb(25, 83, 197);
+}
+
+a:visited {
+  color: rgb(97, 17, 173);
+}
+
+a:hover {
+  color: rgb(70, 110, 10);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  text-size-adjust: 50px;
+  border-radius: 20%;
+  background-color: rgb(2, 97, 53);
+  color: aliceblue;
+}
+
+.showH1 {
+  border-top: 1px solid black;
+  border-bottom: 4px double green;
+}

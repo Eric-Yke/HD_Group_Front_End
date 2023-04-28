@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Order Detail</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="providerStyle.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Order Detail</h1>
+    <table>
+      <tr>
+        <td>Order Number</td>
+        <td id="orderNumber"></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td id="address"></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td id="name"></td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td id="phone"></td>
+      </tr>
+      <tr>
+        <td>Notes</td>
+        <td id="notes"></td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td id="time"></td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="orderList.js"></script>
+  <script>
+    $(document).ready(function () {
+      // var orderNumber = sessionStorage.getItem("orderNumber");
+      // var order = findOrder(orderNumber);
+      // $("#orderNumber").text(order.orderNumber);
+      // $("#address").text(order.address);
+      // $("#name").text(order.name);
+      // $("#phone").text(order.phone);
+      // $("#notes").text(order.notes);
+      // $("#time").text(order.time);
+
+      // 从本地存储中获取订单信息
+      var currentOrder = JSON.parse(localStorage.getItem('currentOrder'));
+
+      // 将订单信息渲染到页面上
+      $('.order-number').text(currentOrder.orderNumber);
+      $('.address').text(currentOrder.address);
+      $('.name').text(currentOrder.name);
+      $('.phone').text(currentOrder.phone);
+      $('.notes').text(currentOrder.notes);
+    });
+  </script>
+</body>
+
+</html>
