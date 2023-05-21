@@ -2,7 +2,7 @@ $(document).ready(function () {
 
   //导入json数据
   $.ajax({
-    url: 'orderhistory.json',
+    url: 'client_membership_history.json',
     dataType: 'json',
     success: function (data) {
       // 将 JSON 数据填充到页面中
@@ -11,15 +11,15 @@ $(document).ready(function () {
       data.forEach(function (item) {
         const row = tbody.insertRow();
 
+        const id_cell = row.insertCell();
         const date_cell = row.insertCell();
-        const serviceType_cell = row.insertCell();
-        const orderNo_cell = row.insertCell();
-        const professional_cell = row.insertCell();
+        const product_cell = row.insertCell();
+        const price_cell = row.insertCell();
 
-        date_cell.innerHTML = item.date;
-        serviceType_cell.innerHTML = item.serviceType;
-        orderNo_cell.innerHTML = item.orderNo;
-        professional_cell.innerHTML = item.professional;
+        id_cell.innerHTML = item.order_id;
+        date_cell.innerHTML = item.order_date;
+        product_cell.innerHTML = item.product_name;
+        price_cell.innerHTML = item.price;
       });
     },
     error: function () {

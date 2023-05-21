@@ -14,10 +14,10 @@ $(document).ready(function () {
         html += '<div id="avatar"><label for="selectButton"><img src="' + item.avatar + '" style="width: 100px;"></label></div>';
         //专业人士个人信息 div：professionalsInfo
         html += '<div id="professionalsInfo"><p>Name: ' + item.name + '</p>';
+        html += '<p>Service rating score: ' + item.score + '</p>';
+        html += '<p>Phone number: ' + item.phone_number + '</p></div>';
         //选中按钮 div：selectButton
-        html += '<div id="selectButton"><input type="radio" name="pinkAProfessional value="select">Select</div>';
-        html += '<p>Comprehensive Score: ' + item.score + '</p>';
-        html += '<p>Phone Number: ' + index.phone_number + '</p></div>';
+        html += '<div id="selectButton"><input type="radio" name="pinkAProfessional value="select"> <b>Select this professional</b></div>';
         html += '<br />';
         html += '</div>';
       });

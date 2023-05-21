@@ -96,20 +96,31 @@
   <main>
     <section>
       <div class="rad-body-wrapper">
-        <h1>Become an annual member and enjoy unlimited assistance callouts!</h1>
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Client Membership Subscription</h3>
+                  <h3 class="panel-title">Payment Report</h3>
                 </div>
                 <div class="panel-body">
-                  <h2>AUD $ 4999 Annually</h2>
-                  Enjoy unlimited assistance callouts in an entire year.
-                  <br /><br />
+                  <h4>Total services paid: <b>0</b></h4>
+                  <h4>Membership subscription paid: <b>3</b></h4>
+                  <table class="table table-bordered" id="myTable">
+                    <thead>
+                      <tr>
+                        <th><b>Order ID</b></th>
+                        <th><b>Order Date</b></th>
+                        <th><b>Prodcut name</b></th>
+                        <th><b>Price</b></th>
+                      </tr>
+                    </thead>
 
-                  <a href="client_subscribe-process.html" class="btn btn-primary">Subscribe now</a>
+                    <tbody id="orderTableBody">
+                      
+                    </tbody>
+                  </table>
+
                 </div>
               </div>
             </div>
@@ -125,6 +136,8 @@
   <script src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'></script>
   <script src='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js'></script>
   <script  src="./script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="client_membership_history.js"></script>
 
 </body>
 </html>

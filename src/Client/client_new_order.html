@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Client Dashboard</title>
+    <title>Client Orders</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
@@ -74,7 +74,7 @@
           </li>
 
           <li>
-            <a href="client_membership.html" class="snooz">
+            <a href="client_subscribe.html" class="snooz">
               <i class="fa fa-credit-card">
                 <span class="icon-bg rad-bg-primary"></span>
               </i>
@@ -96,57 +96,94 @@
     <main>
       <section>
         <div class="rad-body-wrapper">
-          <h1>Client Dashboard</h1>
+          <h1>Create a new order</h1>
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-12">
                 <div class="panel panel-default">
                   <div class="panel-heading">
-                    <h3 class="panel-title">Announcements</h3>
+                    <h3 class="panel-title">Select the available serive provider (within 50 kms)</h3>
                   </div>
                   <div class="panel-body">
-                    <h2>
-                      Welcome to Housing Service Pro! <br />
-                      A public platform that connects local housing service specialists with people in need.
-                    </h2>
-
-                    <h3>What services do we provide?</h3>
-                    The platform offers a variety of housing services, such as:<br />
-                    <ul>
-                      <li>Tree removal</li>
-                      <li>Roof cleaning</li>
-                      <li>Fence installation</li>
-                      <li>Oven repairs</li>
-                      <li>Weeding</li>
-                      <li>etc.</li>
-                    </ul>
-                    <h3>How do I start using the serive?</h3>
-                    To start using the service, click <a href="client_user_center.html">User Center</a> and fill up your personal details.<br />
-                    <h3>How do I pay for the service?</h3>
-                    As a client, you can either pay per service use or you can pay a fixed membership fee annually and are entitled to unlimited assistance callouts.<br />
+                    <div id="professionalList">
+                    </div>   
                   </div>
                 </div>
-              </div> 
-            </div>
-
-            <div>
-              <h2>Shortcut</h2>
-              <div class="list-group">
-                <a href="client_subscribe.html" class="list-group-item">Purchase Subscription</a>
-                <a href="client_user_center.html" class="list-group-item">Update personal details</a>
               </div>
+
+              <div class="col-md-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Service Information</h3>
+                  </div>
+                  <div class="panel-body">
+                    Service requested: <b>Tree removal</b>
+                    <br />
+                    Service location: <b>W125/200 Crown St Wollongong NSW 2500</b>
+                    <br />
+                    Your details 
+                    <br />
+                    <b>Mr.Rick</b> 
+                    <br />                 
+                    <b>chenguoqiangsg@gmail.com</b> 
+                    <br />
+                    <b>0493417283</b> 
+                    <br /> 
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Order detail</h3>
+                  </div>
+                  <div class="panel-body">               
+                    Order number: <b><span id="order_number"></span></b>
+                    <br /><br />
+                    Fee : <b>Free (Included in Membership subscription)</b>
+                    <br /><br />
+                    Order Date: <b><span id="start_date"></span></b>
+                    <br /><br />
+                  </div>
+                </div>
+              </div>                
+              &nbsp;&nbsp;&nbsp;&nbsp;<a href="client_order.html" onClick="pay()" class="btn btn-primary">Checkout</a>
+
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- partial -->
+  <!-- partial -->
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js'></script><script  src="./script.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js'></script>
+    <script  src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="loading_professionals.js"></script>
+    <script>
+      // create order number
+      var randomNumber = Math.floor(Math.random() * 90000000) + 10000000;
+      var orderNumber = document.getElementById("order_number");
+      orderNumber.innerHTML = randomNumber;
+  
+      // create start date 
+      var currentDate = new Date(); 
+      var year = currentDate.getFullYear(); 
+      var month = ('0' + (currentDate.getMonth() + 1)).slice(-2); 
+      var day = ('0' + currentDate.getDate()).slice(-2);
+      var formattedDate = year + '-' + month + '-' + day; 
+      var todayElement = document.getElementById("start_date");
+      todayElement.innerHTML = formattedDate;
+  
+      function pay(){
+        alert("Order placed successfully! Awaiting for the service provider to accept the request. You can check the current status at the order page.")
+      }
+    </script>
 
   </body>
 </html>

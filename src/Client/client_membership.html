@@ -74,7 +74,7 @@
           </li>
 
           <li>
-            <a href="client_subscribe.html" class="snooz">
+            <a href="client_membership.html" class="snooz">
               <i class="fa fa-credit-card">
                 <span class="icon-bg rad-bg-primary"></span>
               </i>
@@ -93,38 +93,59 @@
       </nav>
     </aside>
 
-  <main>
-    <section>
-      <div class="rad-body-wrapper">
-        <h1>Become an annual member and enjoy unlimited assistance callouts!</h1>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Client Membership Subscription</h3>
-                </div>
-                <div class="panel-body">
-                  <h2>AUD $ 4999 Annually</h2>
-                  Enjoy unlimited assistance callouts in an entire year.
-                  <br /><br />
-
-                  <a href="client_subscribe-process.html" class="btn btn-primary">Subscribe now</a>
-                </div>
+<main>
+  <section>
+    <div class="rad-body-wrapper">
+      <h1>Manage your membership subscription</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Your current client membership</h3>
+              </div>
+              <div class="panel-body">
+                <h2>Started from: <span id="start_date"></span></h2>
+                <br />
+                <h2>End in: <span id="end_date"></span></h2>
+                <br />
+                
+                <a href="client_subscribe.html" onClick="cancel_sub()" class="btn btn-primary">Cancel subscribtion now</a>&nbsp;&nbsp;
+                <a href="client_subscribe-process.html" class="btn btn-primary">Extended membership period</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
-  <!-- partial -->
+    </div>
+  </section>
+</main>
+<!-- partial -->
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
   <script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
   <script src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'></script>
   <script src='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js'></script>
   <script  src="./script.js"></script>
+  <script>
+    // create start date 
+    var currentDate = new Date(); 
+    var year = currentDate.getFullYear();
+    var next_year = currentDate.getFullYear() + 1;
+    var month = ('0' + (currentDate.getMonth() + 1)).slice(-2); 
+    var day = ('0' + currentDate.getDate()).slice(-2);
+    var formattedDate = year + '-' + month + '-' + day; 
+    var formattedDate_end = next_year + '-' + month + '-' + day; 
+    var start_date = document.getElementById("start_date");
+    start_date.innerHTML = formattedDate;
+    var end_date = document.getElementById("end_date");
+    end_date.innerHTML = formattedDate_end;
+
+    // cancel subscription
+    function cancel_sub(){
+      alert("Cancel successful");
+    }
+  </script>
 
 </body>
 </html>

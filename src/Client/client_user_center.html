@@ -1,95 +1,97 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Client User Center</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
-<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css'>
-<link rel="stylesheet" href="./style.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Client User Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css'>
+    <link rel="stylesheet" href="./style.css">
+  </head>
 
-</head>
-<body>
-<section>
-  <header>
-    <nav class="rad-navigation">
-      <!-- Top left container-->
-      <div class="rad-logo-container">
-        <a href="index.html" class="rad-logo">Housing Service Pro</a>
-        <a href="#" class="rad-toggle-btn pull-right"><i class="fa fa-bars"></i></a>
-      </div>
+  <body>
+    <section>
+      <header>
+        <nav class="rad-navigation">
+          <!-- Top left container-->
+          <div class="rad-logo-container">
+            <a href="client_index.html" class="rad-logo">Housing Service Pro</a>
+            <a href="#" class="rad-toggle-btn pull-right"><i class="fa fa-bars"></i></a>
+          </div>
 
-      <div class="rad-top-nav-container">
-        <ul class="links">
-          <li>
-            <a class="rad-menu-item" href="#">
-              <i class="fa fa-comment-o">
-                <span class="rad-menu-badge">1</span>
-              </i>
-            </a>
-          </li>
-          <li class="rad-dropdown">
-            <a class="rad-menu-item" href="#">
-              <i class="fa fa-bell-o">
-                <span class="rad-menu-badge">1</span>
-              </i>
-            </a>
-            <ul class="rad-dropmenu-item">
-              <li class="rad-dropmenu-header">
-                <a href="#">System Notification</a>
+          <div class="rad-top-nav-container">
+            <ul class="links">
+              <li>
+                <a class="rad-menu-item" href="#">
+                  <i class="fa fa-comment-o">
+                    <span class="rad-menu-badge">1</span>
+                  </i>
+                </a>
               </li>
-              <li class="rad-notification-item">
-                <a class="rad-notification-content" href="#"></a>
+              <li class="rad-dropdown">
+                <a class="rad-menu-item" href="#">
+                  <i class="fa fa-bell-o">
+                    <span class="rad-menu-badge">1</span>
+                  </i>
+                </a>
+                <ul class="rad-dropmenu-item">
+                  <li class="rad-dropmenu-header">
+                    <a href="#">System Notification</a>
+                  </li>
+                  <li class="rad-notification-item">
+                    <a class="rad-notification-content" href="#"></a>
+                  </li>
+                </ul>
               </li>
             </ul>
+          </div>
+        </nav>
+      </header>
+    </section>
+
+    <!-- Sidebar-->
+    <aside>
+      <nav class="rad-sidebar">
+        <ul>
+          <li>
+            <a href="client_index.html" class="inbox">
+              <i class="fa fa-dashboard">
+                <span class="icon-bg rad-bg-success"></span>
+              </i>
+              <span class="rad-sidebar-item">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="client_order.html">
+              <i class="fa fa-list">
+                <span class="icon-bg rad-bg-danger"></span>
+              </i>
+              <span class="rad-sidebar-item">My orders</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="client_membership.html" class="snooz">
+              <i class="fa fa-credit-card">
+                <span class="icon-bg rad-bg-primary"></span>
+              </i>
+              <span class="rad-sidebar-item">Subscription</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="client_user_center.html">
+              <i class="fa fa-user">
+                <span class="icon-bg rad-bg-violet"></span>
+              </i><span class="rad-sidebar-item">User Center</span>
+            </a>
           </li>
         </ul>
-      </div>
-    </nav>
-  </header>
-</section>
-
-<aside>
-  <nav class="rad-sidebar">
-    <ul>
-      <li>
-        <a href="index.html" class="inbox">
-          <i class="fa fa-dashboard">
-            <span class="icon-bg rad-bg-success"></span>
-          </i>
-          <span class="rad-sidebar-item">Dashboard</span>
-        </a>
-      </li>
-
-      <li>
-        <a href="order.html">
-          <i class="fa fa-list">
-		    <span class="icon-bg rad-bg-danger"></span>
-		  </i>
-          <span class="rad-sidebar-item">My orders</span>
-        </a>
-      </li>
-
-      <li>
-        <a href="subscribe.html" class="snooz">
-          <i class="fa fa-credit-card">
-            <span class="icon-bg rad-bg-primary"></span>
-          </i>
-          <span class="rad-sidebar-item">Subscription</span>
-        </a>
-      </li>
-      <!--1-->
-      <li>
-        <a href="user_center.html">
-          <i class="fa fa-user">
-            <span class="icon-bg rad-bg-violet"></span>
-          </i><span class="rad-sidebar-item">User Center</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</aside>
+      </nav>
+    </aside>
 
 <main>
   <section>
@@ -106,7 +108,7 @@
                 <div class="panel-body">
                   <!--action = "back end address"-->
                   <form action = "localhost:8080" method = "post">
-                    Title 
+                    <b>Title</b> 
                     <br /><br />
                     <select name="title">
                       <option value="mr">Mr</option>
@@ -114,11 +116,11 @@
                       <option value="miss">Miss</option>
                     </select>
                     <br /><br />
-                    Given Name 
+                    <b>Given Name</b> 
                     <br /><br />
-                    <input type = "text" name = "given_name">
+                    <input type = "" name = "given_name" value="Rick">
                     <br /><br />
-                    Surname 
+                    <b>Surname</b> 
                     <br /><br />
                     <input type = "text" name = "surname">
                     <br /><br />
@@ -136,13 +138,13 @@
                 <div class="panel-body">
                   <!--action = "back end address"-->
                   <form action = "" method = "post">
-                    Mobile phone 
+                    <b>Mobile phone</b> 
                     <br /><br />
-                    <input type = "text" name = "m_phone">
+                    <input type = "text" name = "m_phone" value="0493417283">
                     <br /><br />
-                    Personal email address 
+                    <b>Personal email address</b>
                     <br /><br />
-                    <input type = "text" name = "new_email">
+                    <input type = "text" name = "new_email" size="30" value="chenguoqiangsg@gmail.com">
                     <br /><br />
                     <input type = "submit" value = "Save">
                   </form>
@@ -158,19 +160,19 @@
                 <div class="panel-body">
                   <!--action = "back end address"-->
                   <form action = "" method = "post">
-                    Address line 1 
+                    <b>Address line 1</b> 
                     <br /><br />
-                    <input type = "text" name = "address1">
+                    <input type = "text" name = "address1" value = "W125/200 Crown St">
                     <br /><br />
-                    Address line 2
+                    <b>Address line 2</b>
                     <br /><br />
-                    <input type = "text" name = "address2">
+                    <input type = "text" name = "address2" placeholder="optional">
                     <br /><br />
-                    Suburb/Town
+                    <b>Suburb/Town</b>
                     <br /><br />
-                    <input type = "text" name = "suburb">
+                    <input type = "text" name = "suburb" value = "Wollongong">
                     <br /><br />
-                    State
+                    <b>State</b>
                     <br /><br />
                     <select name="state">
                       <option value="NSW">NSW</option>
@@ -183,9 +185,9 @@
                       <option value="ACT">ACT</option>
                     </select>
                     <br /><br />
-                    Postcode
+                    <b>Postcode</b>
                     <br /><br />
-                    <input type = "text" name = "postcode">
+                    <input type = "text" name = "postcode" value = "2500">
                     <br /><br />
                     <input type = "submit" value = "Save">
                   </form>
@@ -202,15 +204,15 @@
                 <div class="panel-body">
                   <!--action = "back end address"-->
                   <form action = "" method = "post">
-                    Old password
+                    <b>Old password</b>
                     <br /><br />
                     <input type = "password" name = "old_password" size = "30" placeholder="Please enter the old password">
                     <br /><br />
-                    New Password
+                    <b>New Password</b>
                     <br /><br />
                     <input type = "password" name = "new_password" size = "30" placeholder="Please enter the new password">
                     <br /><br />
-                    Conifrm Password
+                    <b>Conifrm Password</b>
                     <br /><br />
                     <input type = "password" name = "new_password_confirm" size = "30" placeholder="Please enter the new password">
                     <br /><br />

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Client Subscription</title>
+    <title>Pro Orders</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
@@ -17,7 +17,7 @@
         <nav class="rad-navigation">
           <!-- Top left container-->
           <div class="rad-logo-container">
-            <a href="client_index.html" class="rad-logo">Housing Service Pro</a>
+            <a href="pro_index.html" class="rad-logo">Housing Service Pro</a>
             <a href="#" class="rad-toggle-btn pull-right"><i class="fa fa-bars"></i></a>
           </div>
 
@@ -56,7 +56,7 @@
       <nav class="rad-sidebar">
         <ul>
           <li>
-            <a href="client_index.html" class="inbox">
+            <a href="pro_index.html" class="inbox">
               <i class="fa fa-dashboard">
                 <span class="icon-bg rad-bg-success"></span>
               </i>
@@ -65,7 +65,7 @@
           </li>
 
           <li>
-            <a href="client_order.html">
+            <a href="pro_order.html">
               <i class="fa fa-list">
                 <span class="icon-bg rad-bg-danger"></span>
               </i>
@@ -74,7 +74,7 @@
           </li>
 
           <li>
-            <a href="client_subscribe.html" class="snooz">
+            <a href="pro_subscribe.html" class="snooz">
               <i class="fa fa-credit-card">
                 <span class="icon-bg rad-bg-primary"></span>
               </i>
@@ -83,7 +83,7 @@
           </li>
 
           <li>
-            <a href="client_user_center.html">
+            <a href="pro_user_center.html">
               <i class="fa fa-user">
                 <span class="icon-bg rad-bg-violet"></span>
               </i><span class="rad-sidebar-item">User Center</span>
@@ -93,38 +93,53 @@
       </nav>
     </aside>
 
-  <main>
-    <section>
-      <div class="rad-body-wrapper">
-        <h1>Become an annual member and enjoy unlimited assistance callouts!</h1>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Client Membership Subscription</h3>
-                </div>
-                <div class="panel-body">
-                  <h2>AUD $ 4999 Annually</h2>
-                  Enjoy unlimited assistance callouts in an entire year.
-                  <br /><br />
+    <main>
+      <section>
+        <div class="rad-body-wrapper">
+          <h1>Service requests from clients</h1>
+          <div class="container-fluid">
+            <div class="row"> 
+              <div class="col-md-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Recent service requests from clients</h3>
+                  </div>
+                  <div class="panel-body">
+                    <table class="table table-bordered" id="myTable">
+                      <thead>
+                        <tr>
+                          <th><b>Order ID</b></th>
+                          <th><b>Order Date</b></th>
+                          <th><b>Service requested</b></th>
+                          <th><b>Revenue</b></th>
+                          <th><b>Order Status</b></th>
+                        </tr>
+                      </thead>
 
-                  <a href="client_subscribe-process.html" class="btn btn-primary">Subscribe now</a>
+                      <tbody id="orderTableBody">
+                        
+                      </tbody>
+                    </table>
+                    <a href="pro_service_report.html" class="btn btn-primary">Generate a service report</a> &nbsp;&nbsp;
+                    <a href="pro_payment_report.html" class="btn btn-primary">Generate a payment report</a>   
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-  <script src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'></script>
-  <script src='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js'></script>
-  <script  src="./script.js"></script>
+      </section>
+    </main>
 
-</body>
+  <!-- partial -->
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js'></script>
+    <script  src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="pro_order_history.js"></script>
+
+  </body>
 </html>

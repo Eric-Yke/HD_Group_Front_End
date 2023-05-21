@@ -93,38 +93,96 @@
       </nav>
     </aside>
 
-  <main>
-    <section>
-      <div class="rad-body-wrapper">
-        <h1>Become an annual member and enjoy unlimited assistance callouts!</h1>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Client Membership Subscription</h3>
-                </div>
-                <div class="panel-body">
-                  <h2>AUD $ 4999 Annually</h2>
-                  Enjoy unlimited assistance callouts in an entire year.
-                  <br /><br />
+<main>
+  <section>
+    <div class="rad-body-wrapper">
+      <div class="container-fluid">
+        <h1>Purcahse Client membership</h1>
+        <div class="row">
 
-                  <a href="client_subscribe-process.html" class="btn btn-primary">Subscribe now</a>
-                </div>
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Subscription information</h3>
+              </div>
+              <div class="panel-body">               
+                Product name : <b>Client Membership Subscription</b>
+                <br /><br />
+                Duration : <b>Annually</b>
+                <br /><br />
+                Product usage : <b>Unlimited assistance callouts during the subscription period</b>
+                <br /><br />
               </div>
             </div>
           </div>
+
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Subscription detail</h3>
+              </div>
+              <div class="panel-body">               
+                Order number: <b><span id="order_number"></span></b>
+                <br /><br />
+                Fee : <b>AUD $4999</b>
+                <br /><br />
+                Start Date: <b><span id="start_date"></span></b>
+                <br /><br />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Payment method</h3>
+              </div>
+              <div class="panel-body">               
+                <h4><b>Credit or debit card</b></h4>
+                <input type = "text" name = "card_numebr" size = "50" placeholder = "Card numebr">
+                <br /><br />
+                <input type = "text" name = "card_numebr" size = "50" placeholder = "Name on card">
+                <br /><br />
+                <input type = "text" name = "card_numebr" size = "25" placeholder = "Expiration date(MM/YY)">
+                <input type = "text" name = "card_numebr" size = "25" placeholder = "Security Code">
+              </div>
+            </div>
+          </div>
+          
+          &nbsp;&nbsp;&nbsp;&nbsp;<a href="client_membership.html" onClick="pay()" class="btn btn-primary">Pay now</a>
         </div>
       </div>
-    </section>
-  </main>
-  <!-- partial -->
+    </div>
+  </section>
+</main>
+
+<!-- partial -->
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
   <script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
   <script src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'></script>
   <script src='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js'></script>
   <script  src="./script.js"></script>
+  <script>
+    // create order number
+    var randomNumber = Math.floor(Math.random() * 90000000) + 10000000;
+    var orderNumber = document.getElementById("order_number");
+    orderNumber.innerHTML = randomNumber;
+
+    // create start date 
+    var currentDate = new Date(); 
+    var year = currentDate.getFullYear(); 
+    var month = ('0' + (currentDate.getMonth() + 1)).slice(-2); 
+    var day = ('0' + currentDate.getDate()).slice(-2);
+    var formattedDate = year + '-' + month + '-' + day; 
+    var todayElement = document.getElementById("start_date");
+    todayElement.innerHTML = formattedDate;
+
+    function pay(){
+      alert("Payment successful!")
+    }
+  </script>
+
 
 </body>
 </html>

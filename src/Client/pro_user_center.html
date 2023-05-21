@@ -16,7 +16,7 @@
     <nav class="rad-navigation">
       <!-- Top left container-->
       <div class="rad-logo-container">
-        <a href="index.html" class="rad-logo">Housing Service Pro</a>
+        <a href="pro_index.html" class="rad-logo">Housing Service Pro</a>
         <a href="#" class="rad-toggle-btn pull-right"><i class="fa fa-bars"></i></a>
       </div>
 
@@ -54,7 +54,7 @@
   <nav class="rad-sidebar">
     <ul>
       <li>
-        <a href="index.html" class="inbox">
+        <a href="pro_index.html" class="inbox">
           <i class="fa fa-dashboard">
             <span class="icon-bg rad-bg-success"></span>
           </i>
@@ -63,7 +63,7 @@
       </li>
 
       <li>
-        <a href="#">
+        <a href="pro_order.html">
           <i class="fa fa-list">
 		    <span class="icon-bg rad-bg-danger"></span>
 		  </i>
@@ -72,16 +72,16 @@
       </li>
 
       <li>
-        <a href="#" class="snooz">
+        <a href="pro_subscribe.html" class="snooz">
           <i class="fa fa-credit-card">
             <span class="icon-bg rad-bg-primary"></span>
           </i>
           <span class="rad-sidebar-item">Subscription</span>
         </a>
       </li>
-      <!--1-->
+
       <li>
-        <a href="user_center.html">
+        <a href="pro_user_center.html">
           <i class="fa fa-user">
             <span class="icon-bg rad-bg-violet"></span>
           </i><span class="rad-sidebar-item">User Center</span>
@@ -106,7 +106,7 @@
                 <div class="panel-body">
                   <!--action = "back end address"-->
                   <form action = "" method = "post">
-                    Title 
+                    <b>Title</b> 
                     <br /><br />
                     <select name="title">
                       <option value="mr">Mr</option>
@@ -114,21 +114,21 @@
                       <option value="miss">Miss</option>
                     </select>
                     <br /><br />
-                    Given Name 
+                    <b>Given Name</b> 
                     <br /><br />
-                    <input type = "text" name = "given_name">
+                    <input type = "text" name = "given_name" value="Tom">
                     <br /><br />
-                    Surname 
+                    <b>Surname </b>
                     <br /><br />
                     <input type = "text" name = "surname">
                     <br /><br />
-                    The services you could provide
+                    <b>The services you could provide</b>
                     <br /><br />
-                    <input type = "checkbox" value = "s1">Tree removal &nbsp;&nbsp;
-                    <input type = "checkbox" value = "s2">Roof cleaning <br />
-                    <input type = "checkbox" value = "s3">Fence installation &nbsp;&nbsp;
-                    <input type = "checkbox" value = "s4">Oven repair <br />
-                    <input type = "checkbox" value = "s5">1 more <br />     
+                    <input type = "checkbox" value = "s1" checked="checked"> Tree removal &nbsp;&nbsp;
+                    <input type = "checkbox" value = "s2" checked="checked"> Roof cleaning &nbsp;&nbsp;
+                    <input type = "checkbox" value = "s3" checked="checked"> Fence installation &nbsp;&nbsp;
+                    <input type = "checkbox" value = "s4" checked="checked"> Oven repair &nbsp;&nbsp;
+                    <input type = "checkbox" value = "s5" checked="checked"> Weeding <br /><br />    
                     <input type = "submit" value = "Save">
                   </form>
                 </div>
@@ -143,13 +143,13 @@
                 <div class="panel-body">
                   <!--action = "back end address"-->
                   <form action = "" method = "post">
-                    Mobile phone 
+                    <b>Mobile phone</b>
                     <br /><br />
-                    <input type = "text" name = "m_phone">
+                    <input type = "text" name = "m_phone" value="0493490763">
                     <br /><br />
-                    Personal email address 
+                    <b>Personal email address </b>
                     <br /><br />
-                    <input type = "text" name = "new_email">
+                    <input type = "text" name = "new_email" size="30" value="tomlive3837@hotmail.com">
                     <br /><br />
                     <input type = "submit" value = "Save">
                   </form>
@@ -165,19 +165,19 @@
                 <div class="panel-body">
                   <!--action = "back end address"-->
                   <form action = "" method = "post">
-                    Address line 1 
+                    <b>Address line 1</b>
                     <br /><br />
-                    <input type = "text" name = "address1">
+                    <input type = "text" name = "address1" value="29 Bridge St">
                     <br /><br />
-                    Address line 2
+                    <b>Address line 2</b>
                     <br /><br />
-                    <input type = "text" name = "address2">
+                    <input type = "text" name = "address2" placeholder="Optional">
                     <br /><br />
-                    Suburb/Town
+                    <b>Suburb/Town</b>
                     <br /><br />
-                    <input type = "text" name = "suburb">
+                    <input type = "text" name = "suburb" value="Coniston">
                     <br /><br />
-                    State
+                    <b>State</b>
                     <br /><br />
                     <select name="state">
                       <option value="NSW">NSW</option>
@@ -190,9 +190,9 @@
                       <option value="ACT">ACT</option>
                     </select>
                     <br /><br />
-                    Postcode
+                    <b>Postcode</b>
                     <br /><br />
-                    <input type = "text" name = "postcode">
+                    <input type = "text" name = "postcode" value="2500">
                     <br /><br />
                     <input type = "submit" value = "Save">
                   </form>
@@ -209,15 +209,15 @@
                 <div class="panel-body">
                   <!--action = "back end address"-->
                   <form action = "" method = "post">
-                    Old password
+                    <b>Old password</b>
                     <br /><br />
                     <input type = "password" name = "old_password" size = "30" placeholder="Please enter the old password">
                     <br /><br />
-                    New Password
+                    <b>New Password</b>
                     <br /><br />
                     <input type = "password" name = "new_password" size = "30" placeholder="Please enter the new password">
                     <br /><br />
-                    Conifrm Password
+                    <b>Conifrm Password</b>
                     <br /><br />
                     <input type = "password" name = "new_password_confirm" size = "30" placeholder="Please enter the new password">
                     <br /><br />

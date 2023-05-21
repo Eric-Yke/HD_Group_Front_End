@@ -1,156 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-}
+ <style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
 
-header {
-	background-color: #333;
-	color: #fff;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 20px;
-}
+		header {
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 20px;
+		}
 
-header h1 {
-	margin: 0;
-}
+		header h1 {
+			margin: 0;
+		}
 
-nav ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: flex;
-}
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+		}
 
-nav ul li {
-	margin: 0 10px;
-}
+		nav ul li {
+			margin: 0 10px;
+		}
 
-nav ul li a {
-	color: #fff;
-	text-decoration: none;
-}
+		nav ul li a {
+			color: #fff;
+			text-decoration: none;
+		}
 
-.login-btn {
-	background-color: #fff;
-	color: #333;
-	padding: 8px 16px;
-	border-radius: 4px;
-	text-transform: uppercase;
-}
+		.login-btn {
+			background-color: #fff;
+			color: #333;
+			padding: 8px 16px;
+			border-radius: 4px;
+			text-transform: uppercase;
+		}
 
-main {
-	padding: 20px;
-}
-.register-form{
-  border:1px dotted #404040;
-        box-shadow:5px 5px 5px #808080;
-        margin-bottom:30px;
-        margin-left:auto;
-        margin-right:auto;
-        text-align:center;
-        width:665px;
-}
-#register-form {
-	background-color: #f2f2f2;
-	padding: 20px;
-	border-radius: 4px;
-  text-align: center;
-}
+		main {
+			padding: 20px;
+		}
 
+		#login-form {
+			background-color: #f2f2f2;
+			padding: 20px;
+			border-radius: 4px;
+			text-align: center;
+		}
 
-#login-form button[type="submit"] {
-	background-color: #333;
-	color: #fff;
-	padding: 8px 16px;
-	border-radius: 4px;
-	border: none;
-	text-transform: uppercase;
-}
-.t2{
-      margin:20px;
-    }
+		#login-form h2 {
+			margin-top: 0;
+		}
 
+		#login-form label {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		#login-form input,
+		#login-form select {
+			padding: 8px;
+			border-radius: 4px;
+			border: 1px solid #ccc;
+			margin-bottom: 10px;
+			width: 100%;
+		}
+
+		#login-form button[id="sign_up"] {
+			background-color: #333;
+			color: #fff;
+			padding: 8px 16px;
+			border-radius: 4px;
+			border: none;
+			text-transform: uppercase;
+		}
   </style>
-	<title>Login Page</title>
+
+	<title>Sign up Page</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 	<header>
-		<h1>Login Page</h1>
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#" class="login-btn">Login/Register</a></li>
-			</ul>
-		</nav>
+		<h1>HOUSING SERVICE PRO</h1>
 	</header>
-</body>
+
+	<main>
+		<section id="login-form">
+			<h2>Sign up</h2>
+				<label for="username">Enter your username:</label>
+				<input type="text" id="username" name="username" required>
+
+				<label for="password">Enter your password:</label>
+				<input type="password" id="password" name="password" required>
+
+				<label for="user-type">Sign up as:</label>
+				<select id="user-type" name="user-type">
+					<option value="client">Client</option>
+					<option value="professional">Professional</option>
+				</select>
+
+				<button onClick="sign_up();" id="sign_up">Sign up</button>
+
+				<p>Already have an account? <a href="login.html" class="register-link">Log in here!</a></p>
+		</section>
+	</main>
+
+  <script>
+		function sign_up(){
+			alert("Account successfully created");
+
+			var user = document.getElementById("user-type");
+			if (user.value == "client"){
+					window.location.href = "client_index.html";
+				}else{
+					window.location.href = "pro_index.html";
+				}
+		}
+		
+	</script>
+
+ </body>
 </html>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Register</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<form class="login-page">
-		<form class="form">
-			<form class="register-form" id="register-form"><br/><br/>
-				<input type="text" placeholder="Email" id="email"/><br/><br/>
-				<input type="text" placeholder="Mobile Number" id="mobile"/><br/><br/>
-				<input type="text" placeholder="Username" id="Username"/></br><br/>
-        <input type="password" placeholder="Password" id="password"/></br><br/>
-				<input type="text" placeholder="Gender" id="Gender"/></br><br/>
-				<input type="text" placeholder="Birthday” id="Birthday”/></br><br/>
-        <div id="div-id2" class="t2">
-          <form   class="t2" method="post" style="text-align:left" id="form-id2" >
-              <input type="radio" name="choose" value="pest_removal" >
-              <label for="t2">pest_removal</label> <br/>
-             
-              <input type="radio" name="choose" value="weeding">
-              <label for="t2">weeding</label> <br/>
-            
-              <input type="radio" name="choose" value="oven_repairs" >
-              <label for="t2">oven_repairs</label> <br />
-              
-              <input type="radio" name="choose" value="fence_installation">
-              <label for="t2">fence_installation</label> <br />
-
-              <input type="radio" name="choose" value="tree_removal">
-              <label for="t2">tree_removal</label> <br />
-
-              <input type="radio" name="choose" value="roof_cleaning">
-              <label for="t2">roof_cleaning</label> <br />
-              </form> 
-        </div>
-				<button>Register</button></br>
-				<p class="message">Already registered? <a href="#">Sign In</a></p>
-			</form>
-    </form>
-		<div class="company-info">
-			<p>314 HD</HDr></p>
-			<p>123 Main St.</p>
-			<p>Phone: 555-555-5555</p>
-			<p>Email: info@company.com</p>
-		</div>
-	</footer>
-  </form>
-  <script src="script.js"></script>
-</body>
-</html>
-
-
-pest_removal, weeding, oven_repairs, fence_installation, tree_removal, roof_cleaning
