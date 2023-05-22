@@ -98,19 +98,21 @@
 	<main>
 		<section id="login-form">
 			<h2>Login</h2>
-				<label for="username">Username:</label>
-				<input type="text" id="username" name="username" required>
+				<!--<form action="localhost:8080/client/login" method="post">-->
+				<label for="username">Email:</label>
+				<input type="text" id="email" name="email">
 
 				<label for="password">Password:</label>
-				<input type="password" id="password" name="password" required>
+				<input type="password" id="password" name="password">
 
 				<label for="user-type">I am a:</label>
 				<select id="user-type" name="user-type">
 					<option value="client">Client</option>
 					<option value="professional">Professional</option>
 				</select>
-
+				<!--<input type="submit" id="login" value="Login"/>-->
 				<button onClick="login();" id="login">Log in</button>
+				<!--</form>-->
 
 				<p>Don't have an account? <a href="sign_up.html" class="register-link">Sign up here!</a></p>
 		</section>
