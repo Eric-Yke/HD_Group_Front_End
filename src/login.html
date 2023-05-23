@@ -98,30 +98,39 @@
 	<main>
 		<section id="login-form">
 			<h2>Login</h2>
+			<form name="login-form">
 				<label for="username">Email:</label>
 				<input type="text" id="email" name="email">
 
 				<label for="password">Password:</label>
-				<input type="password" id="password" name="password">
+				<input type="password" id="password" name="password" value="">
 
 				<label for="user-type">I am a:</label>
 				<select id="user-type" name="user-type">
 					<option value="client">Client</option>
 					<option value="professional">Professional</option>
 				</select>
-				<button onClick="login();" id="login">Log in</button>
+			</form>
+			<button onClick="login();" id="login">Log in</button>
+			
 
-				<p>Don't have an account? <a href="sign_up.html" class="register-link">Sign up here!</a></p>
+			<p>Don't have an account? <a href="sign_up.html" class="register-link">Sign up here!</a></p>
 		</section>
 	</main>
 
   <script>
 		function login(){
 			var user = document.getElementById("user-type");
-			if (user.value == "client"){
+			var password = document.getElementById("password");
+
+			if (user.value == "client" && password.value !=""){
 				window.location.href = "client_index.html";
-			}else{
+			}
+			else if(user.value == "pro" && password.value !=""){
 				window.location.href = "pro_index.html";
+			}else{
+				alert("Please enter the correct email and password!");
+				window.location.href = "login.html";
 			}
 		}
 	</script>
