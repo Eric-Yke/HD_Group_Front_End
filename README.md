@@ -1,7 +1,7 @@
 # HD_Group_Front_End
 This is our final project front end part.
 
-Please use the file: ./HD_Group_Front_End/src/login.html to start login into the system.
+Please use the file: ./src/login.html to start login into the system.
 
 You can use the test account to login into the system:
 
